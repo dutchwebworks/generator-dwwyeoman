@@ -1,4 +1,4 @@
-## <%= appname %>
+## <%= appname %> Yeoman generator
 
 <%= appdescription %>
 

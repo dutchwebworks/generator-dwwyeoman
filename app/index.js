@@ -89,5 +89,8 @@ module.exports = generators.Base.extend({
 	install: function() {
 		var message = chalk.yellow.bold('All done, now buld a new Yeoman generator');
 		this.log(yosay(message, { maxLength: 22 }));
+	},
+	end: function() {
+		this.spawnCommand('npm', ['install']);
 	}
 });

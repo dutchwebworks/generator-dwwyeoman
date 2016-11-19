@@ -91,6 +91,7 @@ module.exports = generators.Base.extend({
 		this.log(yosay(message, { maxLength: 22 }));
 	},
 	end: function() {
+		// this.spawnCommand('npm', ['install']);
 		// this.spawnCommand('gulp', ['serve', 'a-third-argument']);
 	}
 });
