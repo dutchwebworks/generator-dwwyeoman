@@ -5,19 +5,19 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dutchwebworks/generator-dwwyeoman.git"
+    "url": "https://github.com/dutchwebworks/generator-<%= appname %>.git"
   },
   "bugs": {
-    "url": "https://github.com/dutchwebworks/generator-dwwyeoman/issues"
+    "url": "https://github.com/dutchwebworks/generator-<%= appname %>/issues"
   },
-  "homepage": "https://github.com/dutchwebworks/generator-dwwyeoman",
+  "homepage": "https://github.com/dutchwebworks/generator-<%= appname %>",
   "files": [
     "app"
   ],
   "keywords": [
     "yeoman-generator",
   ],
-  "author": "Dennis Burger",
+  "author": "<%= appauthor %>",
   "license": "ISC",
   "dependencies": {
     "chalk": "^1.1.1",

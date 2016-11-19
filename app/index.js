@@ -9,6 +9,7 @@ module.exports = generators.Base.extend({
 	_createProjectFileSystem: function() {
 		var destRoot = this.destinationRoot(),
 			sourceRoot = this.sourceRoot(),
+			appDir = destRoot + '/app',
 			templateContext = {
 				appname: this.appname,
 				appdescription: this.appdescription,
@@ -21,13 +22,12 @@ module.exports = generators.Base.extend({
 		// Copy over files and directories
 		// ---------------------------
 
-		this.fs.copy(sourceRoot + '/app', destRoot + '/app');
+		mkdirp(appDir + '/templates');
+		this.fs.copy(sourceRoot + '/app/index.js', appDir + '/index.js');
 		this.fs.copy(sourceRoot + '/.gitignore', destRoot + '/.gitignore');
-		this.fs.copy(sourceRoot + '/package.json', destRoot + '/package.json');
-		this.fs.copy(sourceRoot + '/README.md', destRoot + '/README.md');
 
 		// ---------------------------
-		// Copy over (template) files
+		// Copy over (template) files with context
 		// ---------------------------
 
 		this.fs.copyTpl(sourceRoot + '/package.json', destRoot + '/package.json', templateContext);
@@ -55,7 +55,7 @@ module.exports = generators.Base.extend({
 				{
 					name: 'version',
 					message: 'What is the version of your app?',
-					default: '0.1.0'
+					default: '1.0.0'
 				}
 			];
 
