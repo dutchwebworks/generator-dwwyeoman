@@ -15,7 +15,7 @@
     "app"
   ],
   "keywords": [
-    "yeoman-generator",
+    "yeoman-generator"
   ],
   "author": "<%= appauthor %>",
   "license": "ISC",
