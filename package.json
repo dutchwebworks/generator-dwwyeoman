@@ -1,6 +1,6 @@
 {
   "name": "generator-dwwyeoman",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Dutchwebworks template for a new Yeoman generator",
   "main": "app/index.js",
   "repository": {
