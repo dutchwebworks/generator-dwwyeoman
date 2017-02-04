@@ -24,7 +24,7 @@ module.exports = generators.Base.extend({
 
 		mkdirp(appDir + '/templates');
 		this.fs.copy(sourceRoot + '/app/index.js', appDir + '/index.js');
-		this.fs.copy(sourceRoot + '/.gitignore', destRoot + '/.gitignore');
+		this.fs.copy(sourceRoot + '/_gitignore', destRoot + '/.gitignore');
 
 		// ---------------------------
 		// Copy over (template) files with context
